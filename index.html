@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/app.css">
     <meta charset="UTF-8">
@@ -12,11 +15,49 @@
     <div class="container">
         <div class="box">
             <header class="nav-bar">
-
+                <figure>
+                    <img class="logo-header" src="img/logo.svg" alt="logo-spotify">
+                </figure>
+                <div class="nav-general">
+                    <ul class="ul-nav-general">
+                        <li id="home">
+                            <i class="fa-solid fa-house"></i>
+                            <div class="description-icon">
+                                <a id="home-icon" href="#">Home</a>
+                            </div>   
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>     
+                            <div class="description-icon">
+                                <a href="#">Cerca</a>
+                            </div>   
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-book"></i>
+                            <div class="description-icon">
+                                <a href="#">Libreria</a>
+                            </div>   
+                        </li>    
+                    </ul>
+                    <div class="wrapper-playlist">
+                        <h3>PLAYLIST</h3>
+                        <div class="add-playlist">
+                            <i class="fa-solid fa-square-plus"></i>
+                            <span>Crea Playlist</span>
+                        </div>
+                        <ul class="name-playlist">
+                            <li>Nome playlist</li>
+                            <li>Nome playlist</li>
+                            <li>Nome playlist</li>
+                            <li>Nome playlist</li>
+                            <li>Nome playlist</li>
+                        </ul>
+                    </div>
+                </div>
             </header>
             <main class="main-container">
                 <div class="upgrade-bar">
-                    <button class="upgrade-button"><a href="#"> EFFETTUA L'UPGRADE</a></button>
+                    <button class="upgrade-button">EFFETTUA L'UPGRADE</button>
                 </div>
             </main>
         </div>
