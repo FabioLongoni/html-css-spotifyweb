@@ -172,4 +172,7 @@ a {
 .nav-general-container {
     display: flex;
     flex-direction: column;
+    height: calc(100% - 5rem);
+    justify-content: space-between;
+    padding-bottom: 0.8rem;
 }
