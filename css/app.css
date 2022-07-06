@@ -63,7 +63,7 @@ a {
 .upgrade-bar {
     text-align: right;
     padding: 1rem 0 1.75rem 0;
-    background-color: #080b12;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .upgrade-button {
@@ -82,7 +82,7 @@ a {
 /* header/toolbar */
 
 .nav-bar {
-    padding-left: 1rem;
+    padding: 0 1rem;
 }
 
 .logo-header {
@@ -142,4 +142,34 @@ a {
 .wrapper-playlist {
     color: var(--lightgrey2);
     font-size: var(--font1);
+}
+
+.install-link {
+    border-bottom: 1px solid var(--lightgrey2);
+    padding: 0.8rem 0;
+}
+
+.install-link i {
+    margin-right: 0.8rem;
+    color: var(--lightgrey2);
+    cursor: pointer;
+}
+
+#name {
+    font-size: 1.2rem;
+    display: inline;
+    margin-left: 1rem;
+}
+
+.profile i {
+    font-size: 1.5rem;
+}
+
+.profile {
+    padding: 0.8rem 0;
+}
+
+.nav-general-container {
+    display: flex;
+    flex-direction: column;
 }
