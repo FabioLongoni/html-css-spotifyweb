@@ -36,22 +36,13 @@ a {
     height: 100vh;
 }
 
+
+/* struttura box */
+
 .box {
     flex-grow: 1;
     background-color: #141922;
     display: flex;
-}
-
-.toolbar {
-    min-height: 5rem;
-    background-color: #282828;
-}
-
-/* struttura box */
-
-.nav-bar {
-    width: 14.3rem;
-    background-color: black;
 }
 
 .main-container {
@@ -79,10 +70,17 @@ a {
     cursor: pointer;
 }
 
-/* header/toolbar */
+/* header/sidebar */
 
 .nav-bar {
-    padding: 0 1rem;
+    flex-basis: 230px;
+    background-color: black;
+    flex-shrink: 0;
+}
+
+.mobile-logo {
+    width:30px;
+    display: none;
 }
 
 .logo-header {
@@ -92,6 +90,10 @@ a {
 
 .ul-nav-general i {
     font-size: 20px;
+}
+
+.active-nav, figure {
+    margin: 0 1rem;
 }
 
 .description-icon {
@@ -115,7 +117,6 @@ a {
     color: white;
 }
 
-
 .add-playlist span {
     font-weight: var(--fontweightbold);
     font-size: 1.1rem;
@@ -132,7 +133,8 @@ a {
     display: flex;
     gap: 1rem;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    cursor: pointer;
 }
 
 .name-playlist li {
@@ -142,7 +144,12 @@ a {
 .wrapper-playlist {
     color: var(--lightgrey2);
     font-size: var(--font1);
+    padding: 0 1rem;
 }
+
+.install {
+    padding: 0 1rem;
+} 
 
 .install-link {
     border-bottom: 1px solid var(--lightgrey2);
@@ -172,7 +179,55 @@ a {
 .nav-general-container {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 5rem);
+    height: calc(100% - 90px);
     justify-content: space-between;
     padding-bottom: 0.8rem;
 }
+
+
+/* display-mobile */
+
+@media all and (max-width:549px) {
+    .nav-bar {
+        flex-basis: 50px;
+        text-align: center;
+    }
+    .wrapper-playlist,
+    .description-icon,
+    .install,
+    .logo-header {
+        display: none;
+    }
+    
+    .mobile-logo {
+        display: block;
+        padding: 5px 0 20px 0;
+    }
+}
+
+/* toolbar */
+
+.toolbar {
+    flex-basis: 90px;
+    background-color: #282828;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.toolbar >  * {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.current-track, .sound {
+    flex-basis: 230px;
+}
+
+.player {
+    flex-basis: 35%;
+}
+
+
+
+
