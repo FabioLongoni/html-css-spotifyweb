@@ -45,10 +45,6 @@ a {
     display: flex;
 }
 
-.main-container {
-    flex-grow: 1;
-}
-
 /* upgrade bar */
 
 .upgrade-bar {
@@ -392,3 +388,35 @@ a {
     display: block;
     cursor: pointer;
 } 
+
+@media all and (max-width:550px) {
+    .current-track-icon {
+        flex-direction:column;
+        gap: 2px;
+    }
+}
+
+
+
+/* contenuto principale */
+
+.main-container {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.main-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--lightgrey1);
+    font-weight: var(--fontweightbold);
+    font-size: var(--font1);
+    padding-top: 1rem;
+}
+
+.under-red {
+    height: 2px;
+    background-color: red;
+}
