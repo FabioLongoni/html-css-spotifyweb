@@ -242,18 +242,44 @@ a {
 }
 
 .toolbar >  * {
-    padding: 10px;
     border: 1px solid white;
+    padding: 10px;
 }
 
 .current-track, .sound {
     flex-basis: 230px;
+    display: flex;
+}
+
+.current-track {
+    justify-content: space-between;
+    align-items: center;
 }
 
 .player {
     flex-basis: 35%;
 }
 
+.current-track-left {
+    display: flex;
+    gap: 10px;
+}
 
+.current-track-img {
+    width: 40px;
+}
 
+.current-track-name {
+    font-size: var(--font1);
+    font-weight: var(--fontweightbold);
+}
+
+.current-track-name-track {
+    color: var(--lightgrey2);
+    font-size: 10px;
+    line-height: 8px;
+}
+ .current-track-icon {
+    color: var(--lightgrey2);
+ }
 
