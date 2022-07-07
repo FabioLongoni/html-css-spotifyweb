@@ -253,6 +253,7 @@ a {
 .current-track {
     justify-content: space-between;
     align-items: center;
+    gap: 5px;
 }
 
 .player {
@@ -301,6 +302,7 @@ a {
     align-items: center;
     color:white;
     font-size: 14px;
+    gap: 5px;
 }
 
 .sound-value {
@@ -402,7 +404,7 @@ a {
 
 .main-container {
     flex-grow: 1;
-    padding: 0 10px;
+    overflow: auto;
 }
 
 .main-list {
@@ -413,10 +415,55 @@ a {
     color: var(--lightgrey1);
     font-weight: var(--fontweightbold);
     font-size: var(--font1);
-    padding-top: 1rem;
+    padding: 1rem 20px;
+}
+
+
+.underline-list {
+    padding: 0 20px;
 }
 
 .under-red {
     height: 2px;
     background-color: red;
 }
+
+.main-list-item:hover {
+    color: white;
+}
+
+.main-list-item:hover .underline-list {
+    padding: 0;
+}
+
+/* prima sezione main */
+
+section {
+    padding: 20px 20px 0 20px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.col-1 {
+    padding-top: 20px;
+    flex-basis: 10%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+}
+
+.card p,
+.card h4 {
+    padding-top: 10px;
+}
+
