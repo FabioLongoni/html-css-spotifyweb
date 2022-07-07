@@ -242,13 +242,11 @@ a {
 }
 
 .sound, .current-track {
-    border: 1px solid white;
     padding: 10px;
 }
 
 .player {
     padding: 0 10px;
-    border: 1px solid white;
 }
 
 .current-track, .sound {
@@ -298,6 +296,10 @@ a {
     background-color: var(--lightgrey2);
 }
 
+.sound-wrapper {
+    padding: 10px 0;
+}
+
 .sound {
     justify-content: space-between;
     align-items: center;
@@ -328,6 +330,7 @@ a {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    padding: 8px 0;
 }
 
 .listening-time, .remaining-time {
@@ -354,6 +357,7 @@ a {
     position: absolute;
     right: 0;
     transform: translateY(-45%);
+    display: none;
 }
 
 .play-icon:hover {
@@ -369,3 +373,22 @@ a {
     cursor: default;
 }
 
+.listening:hover .listening-bar-time {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.listening:hover .circle {
+    display: block;
+    cursor: pointer;
+}
+
+.sound-wrapper:hover .sound-value {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.sound-wrapper:hover .circle {
+    display: block;
+    cursor: pointer;
+} 
