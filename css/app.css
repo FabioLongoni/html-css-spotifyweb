@@ -241,9 +241,14 @@ a {
     padding: 10px 0;
 }
 
-.toolbar >  * {
+.sound, .current-track {
     border: 1px solid white;
     padding: 10px;
+}
+
+.player {
+    padding: 0 10px;
+    border: 1px solid white;
 }
 
 .current-track, .sound {
@@ -258,6 +263,8 @@ a {
 
 .player {
     flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
 }
 
 .current-track-left {
@@ -279,7 +286,86 @@ a {
     font-size: 10px;
     line-height: 8px;
 }
- .current-track-icon {
+.current-track-icon {
     color: var(--lightgrey2);
- }
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.sound-bar {
+    width: 90px;
+    background-color: var(--lightgrey2);
+}
+
+.sound {
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-size: 14px;
+}
+
+.sound-value {
+    width: 20%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+}
+
+.play-icon {
+    font-size: 30px;
+}
+
+.player-icon {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.listening {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.listening-time, .remaining-time {
+    font-size: 10px;
+}
+
+.listening-bar {
+    width: 100%;
+    background-color: var(--lightgrey2);
+}
+
+.listening-bar-time {
+    width: 20%;
+    height: 2px;
+    background-color: white;
+    position: relative;
+}
+
+.circle {
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    transform: translateY(-45%);
+}
+
+.play-icon:hover {
+    transform: scale(1.1);
+}
+
+.current-track-icon div:hover {
+    color: white;
+}
+
+.current-track-name-track:hover {
+    text-decoration: underline;
+    cursor: default;
+}
 
