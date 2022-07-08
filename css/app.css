@@ -44,6 +44,7 @@ a {
     flex-grow: 1;
     background-color: #141922;
     display: flex;
+    overflow: hidden;
 }
 
 /* upgrade bar */
@@ -106,12 +107,29 @@ a {
     vertical-align: center;
 }
 
+.active-nav {
+    display: flex;
+    align-items: center;
+}
 
 .ul-nav-general {
     padding-bottom: 1.5rem;
 }
 
-#home, #home-icon {
+.active-nav img {
+    width: 1.75rem;
+    opacity: 0.6;
+}
+
+#home img {
+    opacity: 1;
+}
+
+.active {
+    position: relative;
+}
+
+#home-icon {
     color: white;
 }
 
@@ -158,9 +176,14 @@ a {
 
 .install-link {
     border-bottom: 1px solid var(--lightgrey2);
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
     color: var(--lightgrey2);
     cursor: pointer;
+}
+
+.install-link a {
+    font-weight: var(--fontweightbold);
+    font-size: 1rem;
 }
 
 .install-link i {
@@ -171,17 +194,18 @@ a {
 }
 
 #name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: inline;
     margin-left: 1rem;
+    font-weight: var(--fontweightbold);
 }
 
 .profile i {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .profile {
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
 }
 
 .nav-general-container {
@@ -190,6 +214,22 @@ a {
     height: calc(100% - 90px);
     justify-content: space-between;
     padding-bottom: 0.8rem;
+}
+
+.active-nav:hover .active-nav-img {
+    opacity: 1;
+}
+
+.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -17px;
+    width: 3px;
+    background-color: green;
+
 }
 
 .add-playlist:hover {
@@ -266,6 +306,7 @@ a {
 .current-track-left {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .current-track-img {
@@ -296,6 +337,7 @@ a {
 
 .sound-wrapper {
     padding: 10px 0;
+    cursor: pointer;
 }
 
 .sound {
@@ -308,7 +350,7 @@ a {
 
 .sound-value {
     width: 20%;
-    height: 2px;
+    height: 3px;
     background-color: white;
     position: relative;
 }
@@ -330,6 +372,7 @@ a {
     align-items: center;
     gap: 10px;
     padding: 8px 0;
+    cursor: pointer;
 }
 
 .listening-time, .remaining-time {
@@ -343,7 +386,7 @@ a {
 
 .listening-bar-time {
     width: 20%;
-    height: 2px;
+    height: 3px;
     background-color: white;
     position: relative;
 }
@@ -354,8 +397,9 @@ a {
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    right: 0;
-    transform: translateY(-45%);
+    right: -5px;
+    transform: translateY(-50%);
+    top: 50%;
     display: none;
 }
 
@@ -373,7 +417,7 @@ a {
 }
 
 .listening:hover .listening-bar-time {
-    background-color: red;
+    background-color: green;
     cursor: pointer;
 }
 
@@ -383,7 +427,7 @@ a {
 }
 
 .sound-wrapper:hover .sound-value {
-    background-color: red;
+    background-color: green;
     cursor: pointer;
 }
 
@@ -426,7 +470,7 @@ a {
 
 .under-red {
     height: 2px;
-    background-color: red;
+    background-color: green;
 }
 
 .main-list-item:hover {
@@ -459,19 +503,20 @@ section {
     text-align: center;
 }
 
-.card p,
 .card h4 {
     padding-top: 5px;
 }
 
-.card p{
+.subtitle{
     color: var(--lightgrey1);
+    font-size: 12px;
+    padding-top: 5px;
+
 }
 
 .album-img {
     position: relative;
     width: 100%;
-    height: 100%;
 }
 
 .play-album {
@@ -494,7 +539,7 @@ section {
 }
 
 .album-img:hover::after {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .album-img:hover .play-album {
