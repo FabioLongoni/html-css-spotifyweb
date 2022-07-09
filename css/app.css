@@ -53,7 +53,10 @@ a {
     text-align: right;
     padding: 1rem 0 1.75rem 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 2;
+    position: fixed;
+    left: 230px;
+    right: 22px;
 }
 
 .upgrade-button {
@@ -154,8 +157,9 @@ a {
 }
 
 .name-playlist li {
-    line-height: 2rem;
+    line-height: 1.6rem;
     color: var(--lightgrey2);
+    font-weight: var(--fontweightbold);
 }
 
 .wrapper-playlist {
@@ -168,6 +172,7 @@ a {
     color: var(--lightgrey2);
     padding: 0 0 10px 0;
     font-size: var(--font1);
+    font-weight: var(--fontweightbold);
 }
 
 .install {
@@ -226,9 +231,9 @@ a {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -17px;
-    width: 3px;
-    background-color: green;
+    left: -16px;
+    width: 4px;
+    background-color: #b9f62f;
 
 }
 
@@ -330,6 +335,11 @@ a {
     cursor: pointer;
 }
 
+
+.sound div {
+    cursor: pointer;
+}
+
 .sound-bar {
     width: 90px;
     background-color: var(--lightgrey2);
@@ -417,7 +427,7 @@ a {
 }
 
 .listening:hover .listening-bar-time {
-    background-color: green;
+    background-color: #b9f62f;
     cursor: pointer;
 }
 
@@ -427,7 +437,7 @@ a {
 }
 
 .sound-wrapper:hover .sound-value {
-    background-color: green;
+    background-color: #b9f62f;
     cursor: pointer;
 }
 
@@ -468,7 +478,7 @@ a {
 }
 
 .container-album {
-    padding: 1rem 1.25rem;
+    padding: 6.25rem 1.25rem 1rem 1.25rem;
 }
 
 .main-list {
@@ -489,7 +499,7 @@ a {
 
 .under-red {
     height: 2px;
-    background-color: green;
+    background-color: #b9f62f;
 }
 
 .main-list-item:hover {
