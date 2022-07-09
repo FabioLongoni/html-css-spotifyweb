@@ -56,7 +56,7 @@ a {
     z-index: 2;
     position: fixed;
     left: 230px;
-    right: 22px;
+    right: 18px;
 }
 
 .upgrade-button {
@@ -76,6 +76,13 @@ a {
 .upgrade-button:hover {
     transform: scale(1.05);
 }
+
+@media all and (max-width:550px) {
+    .upgrade-bar {
+        left: 50px;
+    }
+}
+
 
 /* header/sidebar */
 
@@ -255,7 +262,7 @@ a {
 
 /* display-mobile */
 
-@media all and (max-width:549px) {
+@media all and (max-width:550px) {
     .nav-bar {
         flex-basis: 50px;
         text-align: center;
